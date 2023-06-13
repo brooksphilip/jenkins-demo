@@ -6,7 +6,7 @@ pipeline {
         } 
     }
     // environment {
-    // registry = "repo.paas.cdf2.usae.bah.com/niem/webui"
+    // registry = "harbor.aws.rancher.lol"
     // registryCredential = "harbor1"
     // DOCKER_USER = credentials('repouser')
     // DOCKER_PASS = credentials('repopassword')
@@ -21,8 +21,7 @@ pipeline {
             steps {
                 container('docker') {
                     script {
-                    //   dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                    sh "ls -la"
+                      dockerImage = docker.build "ubuntu" + ":$BUILD_NUMBER"
                     }
                 }
             }
