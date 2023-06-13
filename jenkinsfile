@@ -5,13 +5,13 @@ pipeline {
             inheritFrom 'jenkins-slave'
         } 
     }
-    // environment {
+    environment {
     repository = "pipeline"
     registry = "harbor.aws.rancher.lol"
     // registryCredential = "harbor1"
     // DOCKER_USER = credentials('repouser')
     // DOCKER_PASS = credentials('repopassword')
-    // }
+    }
     stages {
         stage ("Clone Repo") {
             steps {
