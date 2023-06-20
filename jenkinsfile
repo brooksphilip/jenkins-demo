@@ -35,7 +35,7 @@ pipeline {
         //     steps {
         //         container('docker-daemon') {
         //             script {
-        //                 docker.withRegistry( 'https://repo.paas.cdf2.usae.bah.com/niem/webui', registryCredential ) {
+        //                 docker.withRegistry( 'https://xxxxxx/xxxx/xxxxx', registryCredential ) {
         //                     dockerImage.push("$BUILD_NUMBER")
         //                 }
         //             }
